@@ -2,8 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Producto
 
-def inicioProductos(request):
-    return HttpResponse("<h1>Hola mundo desde Productos!</h1>")
+def indexProductos(request):
+    return render(request, 'productos/index.html')
 
 def parametrosUrl(request,producto_id):
     data = Producto.objects.get(id=producto_id)

@@ -1,9 +1,10 @@
 from django.urls import path
-from .views import inicioClientes, goIndex, parametrosURL
+from .views import login, indexClientes, parametrosURL
 
+app_name = 'clientes'
 
 urlpatterns = [
-    path('home/', inicioClientes, name='inicio'),
-    path('index', goIndex, name='index'),
+    path('', indexClientes, name='index'),
+    path('login/', login, name='login'),
     path('cliente/<int:cliente_id>/', parametrosURL, name='cliente')
 ]

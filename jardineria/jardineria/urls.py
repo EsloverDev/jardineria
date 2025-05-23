@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.urls import path, include
+from clientes.views import index as inicio
 
 """
 URL configuration for jardineria project.
@@ -19,6 +20,7 @@ Including another URLconf
 """
 
 urlpatterns = [
+    path('', inicio, name = 'inicio'),
     path('admin/', admin.site.urls),
     path('productos/', include('productos.urls')),
     path('clientes/', include('clientes.urls'))

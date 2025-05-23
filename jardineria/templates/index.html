@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VitaVerde</title>
+    <link rel="stylesheet" href="{% static 'css/HomeStyles.css' %}">
+</head>
+<body class="contenido">
+    <header>
+        <nav id="barraNav">
+            <img id="logo" src="{% static 'img/saveFreepik.png' %}">
+            <a href="{% url 'productos:index' %}">Productos</a>
+            <a href="{% url 'clientes:index' %}">Clientes</a>
+        </nav>
+    </header>
+    <h1>VitaVerde - Vive verde</h1>
+    <main>
+            <aside id="post">
+                <h2>✨ Bienvenido a VitaVerde✨</h2>
+                <p>El lugar donde tu pasión por la jardinería cobra vida. En <strong>VitaVerde</strong>, creemos que cada espacio puede transformarse en un rincón verde lleno de frescura, armonía y belleza.</p>
+                <p>Descubre nuestra selección de <strong>herramientas, macetas, semillas y accesorios</strong>, junto con una gran variedad de <strong>plantas ornamentales, suculentas, aromáticas y más</strong>, ideales para embellecer cualquier ambiente.</p>
+                <p>🌱 <strong>Cuida. Crea. Conecta con la naturaleza.</strong> 🌱</p>
+                <h3>✨ ¡Empieza hoy tu jardín soñado! ✨</h3>
+                <p>Explora nuestro catálogo y encuentra todo lo que necesitas para dar vida a tus ideas.</p>
+            </aside>
+            <section id="contenedor">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/2SwLs5SlXPc?si=-xPDCN8eCGwmcVh7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </section>
+    </main>
+</body>
+</html>

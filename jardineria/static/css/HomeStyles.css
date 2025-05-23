@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+header {
+    font-size: 20px;
+}
+
+body {
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    margin: 2% 5%;
+}
+
+#barraNav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #205781;
+    padding: 5px;
+    border: 3px solid #fffbdb;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(255, 251, 219);
+}
+
+a {
+    color: #FFFBDB;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+}
+
+a:hover {
+    background-color: #FFFBDB;
+    color: #205781;
+    border-radius: 10px;
+}
+
+#barraNav #logo{
+    width: 40px;
+    vertical-align: middle;
+}
+
+h1{
+    margin: 10px;
+    text-align: center;
+    color: #18230F;
+}
+
+.contenido {
+    width: 90%;
+    height: auto;
+    font-size: large;
+    text-align: justify;
+    margin: 10px auto;
+    line-height: 1.5;
+    background-image: url('../Img/garden.jpg'), linear-gradient(rgba(152, 210, 192, 0.8));
+    position: relative;
+    background-blend-mode: overlay;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+main{
+    text-align: center;
+    padding: 0.5em;
+    display: grid;
+    grid-column-gap: 2rem;
+    grid-template-columns: 4fr 3fr;
+}
+
+#post{
+    background: #205781;
+    padding: 1em;
+    border-radius: 20px;
+    border-style: solid;
+}
+
+section{
+    margin-top: 40px;
+}
+
+aside {
+    background-color: #205781;
+    color: #FFFBDB;
+    border: 3px solid #fffbdb;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(255, 251, 219);
+}
