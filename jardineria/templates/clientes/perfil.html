@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Mi perfil{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/perfilStyles.css' %}">
+{% endblock %}
+
+{% block tags %}<a href="{% url 'productos:index' %}">Productos</a>{% endblock %}
+
+{% block content %}
+<div class="perfil_container">
+    <h1 class="bienvenida">Bienvenid@ {{cliente.nombre}}</h1>
+
+    <section class="datos_personales">
+        <h2>Información del cliente</h2>
+        <ul>
+            <li><strong>Nombre:</strong> {{ cliente.nombre }} {{ cliente.apellido }}</li>
+            <li><strong>Correo:</strong> {{ cliente.email }}</li>
+            <li><strong>Teléfono:</strong> {{ cliente.telefono }}</li>
+            <li><strong>Categoría:</strong> {{ cliente.categoria.nombre }}</li>
+            <li><strong>Fecha de Registro:</strong> {{ cliente.fecha_registro }}</li>
+            <li><strong>Descuento:</strong> {{ cliente.categoria.descuento }}%</li>
+            <li><strong>Envío Gratis:</strong> {{ cliente.categoria.envio_gratis|yesno:"Sí,No" }}</li>
+        </ul>
+    </section>
+    <section class="pedidos">
+        <h2>Pedidos realizados</h2>
+        {% if pedidos %}
+            <table class="tabla_pedidos">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Fecha</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for pedido in pedidos %}
+                        <tr>
+                            <td>{{pedido.id}}</td>
+                            <td>{{pedido.fecha_pedido|date:"Y-m-d H:i"}}</td>
+                            <td class="estado {{pedido.estado}}">{{pedido.estado|capfirst}}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>No has realizado ningún pedido todavía.</p>
+        {% endif %}
+    </section>
+</div>
+{% endblock %}

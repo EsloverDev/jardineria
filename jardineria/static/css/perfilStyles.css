@@ -1,0 +1,59 @@
+.perfil_container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #205781;
+}
+
+.bienvenida {
+    text-align: center;
+}
+
+.datos_personales, .pedidos {
+    margin-top: 30px;
+}
+
+.datos_personales ul {
+    list-style: none;
+    padding: 0;
+}
+
+.datos_personales li {
+    margin-bottom: 10px;
+}
+
+.tabla_pedidos {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.tabla_pedidos th,
+.tabla_pedidos td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.tabla_pedidos th {
+    background-color: #e0f2f1;
+}
+
+.estado.pendiente {
+    color: #ff9800;
+    font-weight: bold;
+}
+
+.estado.enviado {
+    color: #2196f3;
+    font-weight: bold;
+}
+
+.estado.entregado {
+    color: #4caf50;
+    font-weight: bold;
+}

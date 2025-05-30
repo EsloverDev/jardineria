@@ -1,20 +1,13 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VitaVerde</title>
-    <link rel="stylesheet" href="{% static 'css/HomeStyles.css' %}">
-</head>
-<body class="contenido">
-    <header>
-        <nav id="barraNav">
-            <img id="logo" src="{% static 'img/saveFreepik.png' %}">
-            <a href="{% url 'productos:index' %}">Productos</a>
-            <a href="{% url 'clientes:index' %}">Clientes</a>
-        </nav>
-    </header>
+
+{% block extra_css%}
+<link rel="stylesheet" href="{% static 'css/HomeStyles.css' %}">
+{% endblock %}
+
+{% block tags %}<a href="{% url 'clientes:index' %}">Inicia sesión</a>{% endblock %}
+
+{% block content %}
     <h1>VitaVerde - Vive verde</h1>
     <main>
             <aside id="post">
@@ -29,5 +22,4 @@
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/2SwLs5SlXPc?si=-xPDCN8eCGwmcVh7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </section>
     </main>
-</body>
-</html>
+{% endblock %}

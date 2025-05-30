@@ -14,6 +14,7 @@ class Cliente(models.Model):
     email = models.EmailField(unique=True)
     telefono = models.CharField(max_length=15)
     fecha_registro = models.DateField()
+    clave = models.CharField(max_length=128, default='123456')
     categoria = models.ForeignKey(CategoriaCliente, on_delete=models.SET_NULL, null=True, blank=True)
 
     def __str__(self):

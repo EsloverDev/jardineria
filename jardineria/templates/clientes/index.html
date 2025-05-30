@@ -1,28 +1,28 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} 
 {% load static %}
 {% block title %}Iniciar Sesión - VitaVerde{% endblock %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'css/login.css' %}">
+<link rel="stylesheet" href="{% static 'css/loginStyles.css' %}">
 {% endblock %}
 
-{% block content %}
+{% block content %} 
     <form method="POST" action="{% url 'clientes:login' %}" class="formulario">
         {% csrf_token %}
         <h2>Iniciar Sesión</h2>
 
         {% if error %}
-            <p style="color: red; text-align: center;">{{ error }}</p>
+            <p style="color: red; text-align: center;">{{error}}</p>
         {% endif %}
 
-        <label for="username">Usuario:</label>
-        <input type="text" name="username" id="username" required>
+        <label for="email">Email:</label> 
+        <input type="text" name="email" id="email" required>
 
         <label for="password">Contraseña:</label>
         <input type="password" name="password" id="password" required>
 
         <button type="submit">Ingresar</button>
 
-        <p>¿No tienes cuenta? <a href="">Regístrate aquí</a></p>
+        <p>¿No tienes cuenta? <a href="{% url 'clientes:registro'%}">Regístrate aquí</a></p>
     </form>
 {% endblock %}

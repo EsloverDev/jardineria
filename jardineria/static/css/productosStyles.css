@@ -1,0 +1,110 @@
+.categoria{
+    margin: 30px 0;
+}
+
+.categoria h2{
+    border-bottom: 2px solid #205781;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.acciones_superiores{
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 5%;
+    margin-bottom: 20px;
+}
+
+.btn_agregar{
+    background-color: #2e7d32;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn_agregar:hover{
+    background-color: #1b5e20;
+}
+
+.acciones_card{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn_editar, .btn_eliminar{
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.9em;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.btn_editar{
+    background-color: #1976d2;
+}
+
+.btn_editar:hover{
+    background-color: #0d47a1;
+}
+
+.btn_eliminar{
+    background-color: #d32f2f;
+}
+
+.btn_eliminar:hover{
+    background-color: #b71c1c;
+}
+
+.contenedor_cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    width: 90%;
+    margin: 50px auto;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card_producto{
+    box-shadow: 0 5px 10px #205781;
+    transition: 0.3 ease;
+    cursor: pointer;
+    border-radius: 8px;
+    min-width: 200px;
+}
+
+.card_producto:hover{
+    transform: scale(1.05);
+}
+
+.card_producto img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.texto_card{
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #205781;
+}
+ 
+.card_producto .texto_card h3{
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: left;
+}
+
+.card_producto .texto_card p{
+    font-weight: bold;
+    font-size: 16px;
+    display: block;
+}

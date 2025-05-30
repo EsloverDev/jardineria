@@ -22,9 +22,10 @@ class Producto(models.Model):
     categoria = models.ForeignKey(Categoria, on_delete=models.SET_NULL, null=True)
     proveedor = models.ForeignKey(Proveedor, on_delete=models.SET_NULL, null=True)
     fecha_agregado = models.DateTimeField(auto_now_add=True)
+    imagen = models.ImageField(upload_to='productos/', blank=True, null=True)
 
     def __str__(self):
-        return self.nombre  
+        return self.nombre
     
 class Inventario(models.Model):
     producto = models.ForeignKey(Producto, on_delete=models.CASCADE)
@@ -37,5 +38,3 @@ class Inventario(models.Model):
 
     def __str__(self):
         return f"{self.tipo_movimiento} - {self.producto.nombre} ({self.cantidad})"
-
-
